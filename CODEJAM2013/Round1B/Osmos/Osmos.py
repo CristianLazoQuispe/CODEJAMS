@@ -6,18 +6,7 @@ def inputls():
     return list(map(str,input().split(' ')))
 
 
-
-def solve():
-    lista = inputli()
-    ref = lista[0] 
-    sizes = inputli()
-    sizes = sorted(sizes)
-
-    ans = 0
-
-    if ref ==1 :
-        return len(sizes)
-    #print(ref,sizes)
+def solve_sub(ref,sizes):
     for idx,i in enumerate(sizes):
         if (ref>i):
             ref = ref+i
@@ -30,17 +19,26 @@ def solve():
             while(bandera):
                 aux1 =aux1 + (aux1-1)
                 cnt_aux+=1
-                #print(aux1,i)
                 if(aux1>i):
                     bandera = False
-            if cnt_aux>=(len(sizes)-idx):
-                ans += (len(sizes)-idx)
-                break
-            else:
-                ans += cnt_aux
-                ref = aux1+i
-        #print(i,ref)
+            return min(cnt_aux+solve_sub(aux1+i,sizes[idx+1:]),len(sizes)-idx)
+    return 0
+def solve():
 
+    lista = inputli()
+    ref = lista[0] 
+
+    sizes = inputli()
+    sizes = sorted(sizes)
+
+    ans = 0
+
+    if ref ==1 :
+        return len(sizes)
+    
+
+    ans = min(solve_sub(ref,sizes),len(sizes))
+    
     return ans
 
 
