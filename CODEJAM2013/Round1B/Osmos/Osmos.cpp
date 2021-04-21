@@ -18,7 +18,7 @@ typedef vector <pii> vpii;
 typedef vector <pll> vpll;
  
 
-int solve(){
+int solve(){    
     return 20;
 }
 int main(){
