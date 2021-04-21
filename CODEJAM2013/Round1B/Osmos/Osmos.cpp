@@ -18,12 +18,14 @@ typedef vector <ll> vll;
 typedef vector <pii> vpii;
 typedef vector <pll> vpll;
  
- void print(std::vector<long long>  &v)
-{
-    for (auto i: v) {
-        std::cout << i << ' ';
+void print(std::vector<long long>  &v){
+    string result ="";
+    int n = v.size();
+    for (int i=0;i<n;i++) {
+        if (i!=(n-1)) result+= (to_string(i)+" ");
+        else result+=to_string(i);        
     }
-    std::cout << std::endl;
+    std::cout<<result<< std::endl;
 }
  
 
@@ -80,7 +82,7 @@ long long solve(){
 }
 
 int main(){
-    //ios::sync_with_stdio(false); cin.tie(0);
+    ios::sync_with_stdio(false); cin.tie(0);
 
     long long  ans;
     int t;
