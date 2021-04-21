@@ -17,6 +17,15 @@ typedef vector <ll> vll;
 typedef vector <pii> vpii;
 typedef vector <pll> vpll;
  
+void print(std::vector<long long>  &v){
+    string result ="";
+    int n = v.size();
+    for (int i=0;i<n;i++) {
+        if (i!=(n-1)) result+= (to_string(i)+" ");
+        else result+=to_string(i);        
+    }
+    std::cout<<result<< std::endl;
+}
 
 int solve(){
     return 20;
@@ -30,6 +39,8 @@ int main(){
     ans = solve();
     
     rep(i,0,t){
-        cout<<"Case #"<<i+1<<": "<< ans<<"\n"[i == (t-1)];
+        ans = solve();
+        if (i!=(t-1)){cout<<"Case #"<<i+1<<": "<< ans<<"\n";}
+        else {cout<<"Case #"<<i+1<<": "<< ans; }
     }    
 }
