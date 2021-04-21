@@ -15,9 +15,7 @@ def solve_sub(ref,sizes):
             ref = ref+i
         else:
             bandera = True
-            cnt_aux = 0
-            aux = 0
-
+            cnt_aux = 0        
             aux1 = ref
             while(bandera):
                 aux1 =aux1 + (aux1-1)
