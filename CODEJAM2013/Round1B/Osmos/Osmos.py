@@ -1,3 +1,6 @@
+# Sample ok
+# Test 1 and 2 ok
+
 def inputi():
     return int(input())
 def inputli():
