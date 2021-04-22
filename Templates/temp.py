@@ -16,8 +16,19 @@ def print_list(lista):
 
 
 def solve():
+    [n,k] = inputli()
 
-    return [20,40,60]
+    numbers = inputli()
+    #numbers2 = numbers.copy()
+    for idx,a in enumerate(numbers):
+
+        while(k>0 and numbers[idx]>0):
+            numbers[idx]-=1
+            k-=1
+            numbers[-1]+=1
+       
+
+    return numbers
 
 
 t = inputi()
@@ -26,6 +37,7 @@ t = inputi()
 for i in range(t):
 
     ans = solve()
-    print("Case #"+str(i+1)+':',print_list(ans),end='')
+    print(print_list(ans),end="")
+    #print("Case #"+str(i+1)+':',print_list(ans),end='')
     #print("Case #"+str(i+1)+':',ans,end='')
     print('') if i!=(t-1) else None
