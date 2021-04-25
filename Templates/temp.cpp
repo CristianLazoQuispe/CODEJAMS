@@ -21,8 +21,8 @@ void print(std::vector<long long>  &v){
     string result ="";
     int n = v.size();
     for (int i=0;i<n;i++) {
-        if (i!=(n-1)) result+= (to_string(i)+" ");
-        else result+=to_string(i);        
+        if (i!=(n-1)) result+= (to_string(v.at(i))+" ");
+        else result+=to_string(v.at(i));        
     }
     std::cout<<result<< std::endl;
 }

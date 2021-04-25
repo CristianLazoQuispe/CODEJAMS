@@ -37,7 +37,7 @@ t = inputi()
 for i in range(t):
 
     ans = solve()
-    print(print_list(ans),end="")
+    
     #print("Case #"+str(i+1)+':',print_list(ans),end='')
-    #print("Case #"+str(i+1)+':',ans,end='')
+    print("Case #"+str(i+1)+':',ans,end='')
     print('') if i!=(t-1) else None
